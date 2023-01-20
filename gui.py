@@ -44,7 +44,6 @@ class GUI(CONFIG):
         cc_in_entry.place(relx=0.3,rely=0.5,anchor="center",relwidth=0.25)
 
         cc_out_entry = Entry(self.main_f,font=self.font)
-        cc_out_entry.insert(0,"sdasd")
         cc_out_entry["state"] = "disabled"
         cc_out_entry.place(relx=0.7,rely=0.5,anchor="center",relwidth=0.25)
         
