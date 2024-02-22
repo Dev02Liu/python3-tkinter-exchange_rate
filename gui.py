@@ -12,8 +12,8 @@ class GUI(CONFIG):
         super().__init__()
         self.win = root
         self.settings()
-        self.data = requests.get("https://api.exchangerate.host/latest").json()
-        self.keys = list(self.data["rates"].keys())
+        self.data = requests.get("https://v6.exchangerate-api.com/v6/78e9fb49deaa7505b061dc1d/latest/EUR").json()
+        self.keys = list(self.data["conversion_rates"].keys())
         #Frames
         self.main_f = Frame(self.win)
 
@@ -53,9 +53,9 @@ class GUI(CONFIG):
         cc_out_entry["state"] = "normal"
         cc_out_entry.delete(0,END)
         if cc_input == "EUR":
-            multi = self.data["rates"][cc_output] #multiplicator
+            multi = self.data["conversion_rates"][cc_output] #multiplicator
         else:
-            multi = self.data["rates"][cc_output]/self.data["rates"][cc_input] #reference document formula
+            multi = self.data["conversion_rates"][cc_output]/self.data["rates"][cc_input] #reference document formula
         total = round(multi * cc_in_entry,2)
         cc_out_entry.insert(0,total)
         cc_out_entry["state"] = "disabled"
