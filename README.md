@@ -1,5 +1,5 @@
 # Exchange Rate GUI Application
-[![Watch the video](https://youtu.be/V7QoohhoWVc)
+[Watch the youtube](https://youtu.be/V7QoohhoWVc)
 
 ## Overview
 This application provides a graphical user interface to convert currencies using up-to-date exchange rates fetched from an API. The GUI is built using Python's `tkinter` module, making it accessible and easy to use for performing quick currency conversions.
