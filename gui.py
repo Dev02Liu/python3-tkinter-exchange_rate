@@ -55,7 +55,7 @@ class GUI(CONFIG):
         if cc_input == "EUR":
             multi = self.data["conversion_rates"][cc_output] #multiplicator
         else:
-            multi = self.data["conversion_rates"][cc_output]/self.data["rates"][cc_input] #reference document formula
+            multi = self.data["conversion_rates"][cc_output]/self.data["conversion_rates"][cc_input] #reference document formula
         total = round(multi * cc_in_entry,2)
         cc_out_entry.insert(0,total)
         cc_out_entry["state"] = "disabled"
